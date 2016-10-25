@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	}
 	std::string serverip(argv[1]);
 	unsigned short serverport = atoi(argv[2]);
-	std::ofstream filelog(std::string(argv[2]) + ".log");
+	std::ofstream filelog(serverip + "_" + std::string(argv[2]) + ".log");
 	bool echo = false;
 	if (3 < argc)
 	{
