@@ -73,6 +73,7 @@ int main(int argc, char* argv[])
 	::inet_pton(AF_INET, serverip.c_str(), &(serveraddr.sin_addr));
 
 	std::cout << CurrentTime() << "connecting " << serverip << " : " << serverport << std::endl;
+	filelog << CurrentTime() << "connecting " << serverip << " : " << serverport << std::endl;
 
 	ret = connect(connectsocket, (SOCKADDR*)&serveraddr, sizeof(serveraddr));
 	if (SOCKET_ERROR == ret)
